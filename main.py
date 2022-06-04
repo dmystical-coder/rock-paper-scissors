@@ -15,7 +15,7 @@ option = {
 #gameplay
 def play():
     #validate user input
-    # ask the user to pick an option between "R", "P" or "S"
+    # ask the user to pick an option between "R", "P" or "S" and convert to uppercase.
     user = input("What do you choose? Type 'R' for Rock, 'P' for Paper or 'S' for Scissors.\n").upper()
 
     while user not in option:
@@ -60,8 +60,11 @@ def play():
 # Welcome Message
 print("Welcome to the Rock-Paper-Scissors game.")
 time.sleep(3)
+
 print('''Rock-Paper-Scissors is a simple two-player game where, at a signal, players make figures with their hands, representing a rock, a piece of paper, or a pair of scissors. The winner is determined according to a set of rules. ''')
 time.sleep(3)
+
 print("The Rules: \nRock beats Scissors\nPaper beats Rock\nScissors beats Paper")
 time.sleep(3)
+
 play()
