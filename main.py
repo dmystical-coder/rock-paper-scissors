@@ -16,14 +16,15 @@ option = {
 def play():
     #validate user input
     # ask the user to pick an option between "R", "P" or "S" and convert to uppercase.
-    user = input("What do you choose? Type 'R' for Rock, 'P' for Paper or 'S' for Scissors.\n").upper()
+    user = input("What do you choose? Type 'R' for Rock, 'P' for Paper or 'S' for Scissors : ").upper()
+    choose = ["R", "S", "P"]
 
-    while user not in option:
+    while user not in choose:
         print("You haven't entered the right option.\nPlease, Try again!")
-        user = input("What do you choose? Type 'R' for Rock, 'P' for Paper or 'S' for Scissors : ")
+        user = input("What do you choose? Type 'R' for Rock, 'P' for Paper or 'S' for Scissors : ").upper()
+        continue
         
     # Make a choice for the CPU (computer player)
-    choose = ["R", "S", "P"]
     computer = random.choice(choose)
 
     # Print both player's moves in the format: `Player (Rock) : CPU (Paper)`
